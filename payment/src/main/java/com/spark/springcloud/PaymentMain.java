@@ -1,4 +1,4 @@
-package com.liupeng.springcloud;
+package com.spark.springcloud;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;

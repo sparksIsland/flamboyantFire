@@ -1,6 +1,6 @@
-package com.liupeng.springcloud.dao;
+package com.spark.springcloud.dao;
 
-import com.liupeng.springcloud.entities.Payment;
+import com.spark.springcloud.entities.Payment;
 import org.apache.ibatis.annotations.Mapper;
 import org.apache.ibatis.annotations.Param;
 

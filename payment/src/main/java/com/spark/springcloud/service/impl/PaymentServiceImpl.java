@@ -1,8 +1,8 @@
-package com.liupeng.springcloud.service.impl;
+package com.spark.springcloud.service.impl;
 
-import com.liupeng.springcloud.dao.PaymentDao;
-import com.liupeng.springcloud.entities.Payment;
-import com.liupeng.springcloud.service.PaymentService;
+import com.spark.springcloud.dao.PaymentDao;
+import com.spark.springcloud.entities.Payment;
+import com.spark.springcloud.service.PaymentService;
 import org.springframework.stereotype.Service;
 
 import javax.annotation.Resource;

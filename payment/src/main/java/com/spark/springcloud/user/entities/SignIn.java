@@ -1,4 +1,4 @@
-package com.liupeng.springcloud.entities;
+package com.spark.springcloud.user.entities;
 
 import lombok.AllArgsConstructor;
 import lombok.Data;
@@ -15,7 +15,7 @@ import java.io.Serializable;
 @Data
 @AllArgsConstructor
 @NoArgsConstructor
-public class Payment implements Serializable {
+public class SignIn implements Serializable {
     private Long id;
-    private String serial;
+    private String user_name;
 }

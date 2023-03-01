@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+
+<mapper namespace="com.spark.springcloud.user.dao.SignInDao">
+    <resultMap id="BaseResultMap" type="com.spark.springcloud.user.entities.SignIn">
+        <result column="user_name" property="userName" jdbcType="VARCHAR" />
+    </resultMap>
+    <select id="validateLogon" parameterType="String"  resultMap="BaseResultMap" >
+        SELECT * FROM sys_user WHERE user_name=#{userName} AND pass_word=#{passWord};
+    </select>
+
+</mapper>
+
+
+
