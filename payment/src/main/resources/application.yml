@@ -16,7 +16,7 @@ spring:
     allow-circular-references: true
 
 mybatis:
-  mapperLocations: classpath:mapper/*.xml,classpath:mapper/user/*.xml
+  mapperLocations: classpath:mapper/*.xml, classpath:mapper/user/*.xml
   type-aliases-package: com.spark.springcloud.entities    # 所有Entity别名类所在包
 
 
