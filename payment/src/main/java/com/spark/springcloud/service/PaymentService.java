@@ -1,6 +1,6 @@
-package com.liupeng.springcloud.service;
+package com.spark.springcloud.service;
 
-import com.liupeng.springcloud.entities.Payment;
+import com.spark.springcloud.entities.Payment;
 import org.apache.ibatis.annotations.Param;
 
 /**

@@ -1,10 +1,9 @@
-package com.liupeng.springcloud.controller;
+package com.spark.springcloud.controller;
 
-import com.liupeng.springcloud.entities.CommonResult;
-import com.liupeng.springcloud.entities.Payment;
-import com.liupeng.springcloud.service.PaymentService;
+import com.spark.springcloud.entities.CommonResult;
+import com.spark.springcloud.entities.Payment;
+import com.spark.springcloud.service.PaymentService;
 import lombok.extern.slf4j.Slf4j;
-import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.*;
 
 import javax.annotation.Resource;
@@ -36,7 +35,7 @@ public class PaymentController {
     }
 
     // 查询一般是 get 操作
-    @GetMapping(value = "/payment/get/{id}")
+    @GetMapping(value = "/user/get/{id}")
     public CommonResult<Payment> getPaymentById(@PathVariable("id") Long id) {
         Payment payment = paymentService.getPaymentById(id);
         log.info("*****查询结果:{}", payment);
