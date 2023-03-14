@@ -5,6 +5,7 @@ import lombok.Data;
 import lombok.NoArgsConstructor;
 
 import java.io.Serializable;
+import java.util.Date;
 
 /**
  * @ClassNmae Payment：
@@ -16,6 +17,8 @@ import java.io.Serializable;
 @AllArgsConstructor
 @NoArgsConstructor
 public class SignIn implements Serializable {
-    private Long id;
-    private String user_name;
+    private Integer id;
+    private String userName;
+    private String token;
+    private Date tokenTime;
 }

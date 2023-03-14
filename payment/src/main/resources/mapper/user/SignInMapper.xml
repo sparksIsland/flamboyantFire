@@ -4,7 +4,12 @@
 <mapper namespace="com.spark.springcloud.user.dao.SignInDao">
     <resultMap id="BaseResultMap" type="com.spark.springcloud.user.entities.SignIn">
         <result column="user_name" property="userName" jdbcType="VARCHAR" />
+        <result column="token" property="token" jdbcType="VARCHAR" />
+        <result column="token_time" property="tokenTime" jdbcType="DATE" />
     </resultMap>
+    <update id="UpDataToken" parameterType="com.spark.springcloud.user.entities.SignIn">
+        update sys_user set token=#{token} where id=#{id};
+    </update>
     <select id="validateLogon" parameterType="String"  resultMap="BaseResultMap" >
         SELECT * FROM sys_user WHERE user_name=#{userName} AND pass_word=#{passWord};
     </select>

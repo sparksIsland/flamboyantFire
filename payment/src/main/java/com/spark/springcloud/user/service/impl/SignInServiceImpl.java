@@ -14,4 +14,8 @@ public class SignInServiceImpl implements SignInService {
     public SignIn validateLogon(String userName, String passWord) {
         return signInDao.validateLogon(userName, passWord);
     }
+    @Override
+    public Integer UpDataToken(Integer id, String token) {
+        return signInDao.UpDataToken(id, token);
+    }
 }
