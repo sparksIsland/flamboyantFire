@@ -6,7 +6,7 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 /**
  * @ClassNmae PaymentMain：
  * TODO：
- * @Author liupeng、2022/9/21、6:45：
+ * @Author spark、2022/9/21、6:45：
  * 1.0
  **/
 @SpringBootApplication
