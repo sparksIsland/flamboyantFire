@@ -23,7 +23,6 @@ public class SignInController {
     @GetMapping(value = "/user/sigin/{userName}/{passWord}")
     public CommonResult<SignIn> validateLogon(@PathVariable("userName") String userName, @PathVariable("passWord") String passWord) {
         SignIn signIn = signInService.validateLogon(userName, passWord);
-        log.info("1111", signIn);
         if (signIn != null) {
             return new CommonResult(200, "查询成功", signIn);
         } else {

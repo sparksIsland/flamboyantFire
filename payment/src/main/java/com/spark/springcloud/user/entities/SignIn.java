@@ -17,5 +17,5 @@ import java.io.Serializable;
 @NoArgsConstructor
 public class SignIn implements Serializable {
     private Long id;
-    private String user_name;
+    private String userName;
 }
