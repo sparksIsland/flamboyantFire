@@ -12,4 +12,6 @@ import java.io.Serializable;
 public  class  SongNameObj implements Serializable {
     public String songName;
     public String singerName;
+    public Long currentPage;
+    public Long pageSize;
 }

@@ -10,6 +10,6 @@ import java.util.List;
 
 @Mapper
 public interface MusicListDao {
-    List<MusicList> queryByName(@Param("songName") String songName, @Param("singerName") String singerName);
+    List<MusicList> queryByName(@Param("songName") String songName, @Param("singerName") String singerName, @Param("currentNum") Long currentNum, @Param("pageSize") Long pageSize);
     Long queryByNameTotal(@Param("songName") String songName, @Param("singerName") String singerName);
 }
