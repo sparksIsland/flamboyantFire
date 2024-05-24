@@ -22,11 +22,11 @@ import java.util.UUID;
 public class SignInController {
     @Resource
     private SignInService signInService;
-    @GetMapping(value = "/user")
+    @GetMapping(value = "/spark/user")
     public String abc() {
         return "abc";
     }
-    @GetMapping(value = "/user/sigin/{userName}/{passWord}")
+    @GetMapping(value = "/spark/user/sigin/{userName}/{passWord}")
     public CommonResult<SignIn> validateLogon(@PathVariable("userName") String userName, @PathVariable("passWord") String passWord) {
         SignIn signIn = signInService.validateLogon(userName, passWord);
 //        if (signIn.getToken() != "") {

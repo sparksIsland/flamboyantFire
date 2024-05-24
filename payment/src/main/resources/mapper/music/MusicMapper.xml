@@ -10,7 +10,7 @@
             <result column="duration" property="duration" jdbcType="VARCHAR" />
     </resultMap>
     <select id="queryByName" parameterType="String"  resultMap="BaseResultMap" >
-        SELECT id,song_name,singer_name,key_value,duration FROM music_list WHERE song_name LIKE "%${songName}%" AND singer_name LIKE "%${singerName}%";
+        SELECT id,song_name,singer_name,key_value,duration FROM music_list WHERE song_name LIKE "%${songName}%" AND singer_name LIKE "%${singerName}%" LIMIT ${pageSize} OFFSET ${currentNum};
     </select>
 </mapper>
 

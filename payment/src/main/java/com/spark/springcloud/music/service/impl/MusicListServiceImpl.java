@@ -22,7 +22,10 @@ public class MusicListServiceImpl implements MusicListService {
     public List<MusicList> queryByName(SongNameObj songNameObj) {
         String songName = songNameObj.songName;
         String singerName = songNameObj.singerName;
-        return MusicListDao.queryByName(songName, singerName);
+        Long currentPage = songNameObj.currentPage;
+        Long pageSize = songNameObj.pageSize;
+        Long currentNum = (currentPage - 1) * pageSize;
+        return MusicListDao.queryByName(songName, singerName, currentNum, pageSize);
     }
     @Override
     public Long queryByNameTotal(SongNameObj songNameObj) {

@@ -17,7 +17,7 @@ import java.util.List;
 public class MusicListController {
     @Resource
     private MusicListService MusicListService;
-    @PostMapping (value = "/music/querybyname")
+    @PostMapping (value = "/spark/music/querybyname")
     public CommonResult<MusicResp> queryByName(@RequestBody SongNameObj songNameObj) {
         List<MusicList> musicList = MusicListService.queryByName(songNameObj);
         Long total = MusicListService.queryByNameTotal(songNameObj);

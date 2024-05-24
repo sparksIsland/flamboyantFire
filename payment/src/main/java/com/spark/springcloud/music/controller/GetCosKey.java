@@ -11,32 +11,22 @@ import java.io.File;
 import java.io.FileInputStream;
 import java.util.Properties;
 import java.util.TreeMap;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 
 @RestController
 @Slf4j
 public class GetCosKey {
-    @GetMapping (value = "/cos/getcoskey")
+    @GetMapping (value = "/spark/cos/getcoskey")
     public CommonResult<Object> getCosKey() {
 
         TreeMap<String, Object> config = new TreeMap<String, Object>();
-
+        Logger log = LoggerFactory.getLogger(getClass());
         try {
-            Properties properties = new Properties();
-            File configFile = new File("local.properties");
-            properties.load(new FileInputStream(configFile));
-
             // 云 api 密钥 SecretId
-            config.put("secretId", properties.getProperty("SecretId"));
+            config.put("secretId", "AKID2tZ2FCtKLDqEMFuJ0kQsIVTYS8auymKj");
             // 云 api 密钥 SecretKey
-            config.put("secretKey", properties.getProperty("SecretKey"));
-
-            if (properties.containsKey("https.proxyHost")) {
-                System.setProperty("https.proxyHost", properties.getProperty("https.proxyHost"));
-                System.setProperty("https.proxyPort", properties.getProperty("https.proxyPort"));
-            }
-
-            // 设置域名,可通过此方式设置内网域名
-            //config.put("host", "sts.internal.tencentcloudapi.com");
+            config.put("secretKey", "FDvQhUQLOM7c4HLAj393i8IjuqYowsb6");
 
             // 临时密钥有效时长，单位是秒
             config.put("durationSeconds", 1800);
@@ -66,7 +56,6 @@ public class GetCosKey {
                     "name/cos:CompleteMultipartUpload"
             };
             config.put("allowActions", allowActions);
-
             Response response = CosStsClient.getCredential(config);
             return new CommonResult(200, "查询成功", response);
         } catch (Exception e) {
