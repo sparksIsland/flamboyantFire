@@ -1,4 +1,4 @@
-package com.spark.springcloud;
+package com;
 
 import org.springframework.boot.SpringBootConfiguration;
 import org.springframework.web.servlet.config.annotation.CorsRegistry;
