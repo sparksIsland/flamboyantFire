@@ -17,12 +17,12 @@ import java.util.List;
 @Slf4j
 public class MusicListController {
     @Resource
-    private MusicListService MusicListService;
+    private MusicListService musicListService;
 
     @PostMapping(value = "/spark/music/querybyname")
     public CommonResult<MusicResp> queryByName(@RequestBody SongNameObj songNameObj) {
-        List<MusicList> musicList = MusicListService.queryByName(songNameObj);
-        Long total = MusicListService.queryByNameTotal(songNameObj);
+        List<MusicList> musicList = musicListService.queryByName(songNameObj);
+        Long total = musicListService.queryByNameTotal(songNameObj);
         log.info(total.toString());
         MusicResp musicResp = new MusicResp();
         musicResp.setList(musicList);

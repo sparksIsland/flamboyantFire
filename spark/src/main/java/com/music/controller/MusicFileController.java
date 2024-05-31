@@ -1,20 +1,25 @@
-package com.utils;
+package com.music.controller;
 
 import com.common.entity.CommonResult;
 import com.tencent.cloud.CosStsClient;
 import com.tencent.cloud.Response;
-import lombok.extern.slf4j.Slf4j;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 import java.util.TreeMap;
 
+/**
+ * @author liupeng
+ * @version 1.0
+ * @description: TODO
+ * @date 2024/5/31 13:42
+ */
 @RestController
-@Slf4j
-public class GetCosKey {
+public class MusicFileController {
+
+
     @GetMapping(value = "/spark/cos/getcoskey")
     public CommonResult<Object> getCosKey() {
-
         TreeMap<String, Object> config = new TreeMap<String, Object>();
         try {
             // 云 api 密钥 SecretId

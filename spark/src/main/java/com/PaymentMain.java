@@ -5,7 +5,7 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 
 /**
  * @ClassNmae PaymentMain：
- * TODO：
+ * TODO：启动类
  * @Author spark、2022/9/21、6:45：
  * 1.0
  **/
