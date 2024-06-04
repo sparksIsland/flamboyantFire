@@ -1,10 +1,7 @@
 
 
 # 项目
-> 目前暂定分为两部分
-
-- Music
-- TestToDo
+> 目前暂定分为两部分【Music】和【TestToDo】
 
 相关的代码取名驼峰第一个单词
 
@@ -21,4 +18,12 @@
 
 ### resources
 > 各种配置文件，项目插件配置和 sql 对应的 xml 文件
+
+
+
+## 基础代码
+### 日志
+```
+log.info("userName = {}  passWord = {}", userName, passWord);
+```
 

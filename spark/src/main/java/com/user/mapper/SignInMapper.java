@@ -1,4 +1,4 @@
-package com.user.dao;
+package com.user.mapper;
 
 import com.user.entities.SignIn;
 import org.apache.ibatis.annotations.Mapper;

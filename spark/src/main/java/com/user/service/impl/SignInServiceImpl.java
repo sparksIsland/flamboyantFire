@@ -1,6 +1,6 @@
 package com.user.service.impl;
 
-import com.user.dao.SignInMapper;
+import com.user.mapper.SignInMapper;
 import com.user.entities.SignIn;
 import com.user.service.SignInService;
 import lombok.extern.slf4j.Slf4j;
@@ -16,7 +16,7 @@ public class SignInServiceImpl implements SignInService {
 
     @Override
     public SignIn validateLogon(String userName, String passWord) {
-        log.info(userName + passWord);
+        log.info("userName = {}  passWord = {}", userName, passWord);
         return signInMapper.validateLogon(userName, passWord);
     }
 

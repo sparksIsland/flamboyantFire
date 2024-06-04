@@ -19,4 +19,8 @@ mybatis:
   mapper-locations: classpath:mapper/*.xml, classpath:mapper/user/*.xml, classpath:mapper/music/*.xml
 #  type-aliases-package: com.spark.springcloud.entities    # 所有Entity别名类所在包
 
+# 日志配置
+logging:
+  level:
+    com: debug
 
